@@ -1,5 +1,4 @@
 package main
-
 import (
 	"context"
 	"log"
@@ -7,13 +6,11 @@ import (
 	"github.com/wafi/hello-workflow/helloworkflow"
 	"go.temporal.io/sdk/client"
 )
-
 func main() {
 	c, err := client.NewClient(client.Options{})
 	if err != nil {
 		log.Fatalln("Unable to make client", err)
 	}
-
 	defer c.Close()
 
 	workflowOptions := client.StartWorkflowOptions{

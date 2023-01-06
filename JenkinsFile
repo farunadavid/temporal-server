@@ -1,0 +1,52 @@
+pipeline{
+
+    agent any
+    environment{
+        USERNAME=scinet0786
+        USER_PASS=credentials('password')
+        SERVICE=temporal_server
+        REPOSITORY_DETAILS=${USERNAME}/${REPO_NAME}-${SERVICE}:${BUILD_ID}  
+    }
+    stages{
+        //checkout from source control
+      stage('checkout code'){
+        steps{
+            
+        }
+      }
+       //Build docker image
+      stage('Build Image and push to hub'){
+        steps{
+            script{
+                sh """
+                  docker build -t ${REPOSITORY_DETAILS} .
+                   
+                  docker login -u ${USERNAME} --password-stdin ${USER_PASS}
+
+                  docker push ${REPOSITORY_DETAILS}
+                
+                """
+            }
+        }
+      stage('Deploy to kubernetes cluster'){
+
+        steps{
+            script{
+
+                sh """
+                kubectl create ns temporal
+
+                kubectl apply -f docker-compose/k8s/*
+
+                kubectl get pods -n temoral
+                
+                """
+            }
+        }
+      }
+
+
+      }
+    }
+
+}

@@ -17,7 +17,7 @@ func main() {
 		TaskQueue: "hello-world",
 	}
 
-	we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, helloworkflow.Workflow, "Abayomi,This project is  Wafi Cash temporal-server workflow")
+	we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, helloworkflow.Workflow, "ibrahim")
 	if err != nil {
 		log.Fatalln("Unable to execute workflow", err)
 	}

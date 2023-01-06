@@ -38,7 +38,7 @@ pipeline{
 
                 kubectl apply -f docker-compose/k8s/*
 
-                kubectl get pods -n temoral
+                kubectl get pods -n temporal
                 
                 """
             }

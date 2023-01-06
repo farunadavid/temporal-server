@@ -64,10 +64,11 @@ cd kubernetes && cd k8s && kubectl apply -f .
 - **We create a pipeline and then we deploy the workloads by using webhooks thjat has been proconfigured in the environments**
 
 # Final Remarks
-**We see the importance of temporal server in ensuring resiliency and high availability of the instances**
-**Ruuning temporal is very vital for running microservices applications that needs high resiliecy**
-**I once deployed a Java Microservice application with temporal and this application was great because temporal leveraged it's ability to send retries even when one services is down to ensure there is highj availabilty at all times without throwing up an error.**
-**This service can be improved by building it's dependence and enusring the instances are made multiple for loadBalancing and redundance**
+**We see the importance of temporal server in ensuring resiliency and high availability of the instances</br>**
+**Ruuning temporal is very vital for running microservices applications that needs high resiliency</br>**
+** **
+**I once deployed a Java Microservice application with temporal and this application was great because temporal leveraged it's ability to send retries even when one services is down to ensure there is highj availabilty at all times without throwing up an error.</br>**
+**This service can be improved by building it's dependence and enusring the instances are made multiple for loadBalancing and redundance</br>**
 
 ** **
 

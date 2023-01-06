@@ -36,10 +36,10 @@ pipeline{
                 sh """
                 kubectl create ns temporal
 
-                kubectl apply -f docker-compose/k8s/*
+                kubectl apply -f ./Kubernetes/k8s/*
 
                 kubectl get pods -n temporal
-                
+
                 """
             }
         }

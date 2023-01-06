@@ -61,7 +61,7 @@ cd kubernetes && cd k8s && kubectl apply -f .
 ** **
 **But lets look at it using the DevOps way**
 - **AS DevOps Engineers we use Jenkins to Deploy the workloads**
-- **We create a pipeline and then we deploy the workloads by using webhooks thjat has been proconfigured in the environments**
+- **We create a pipeline and then we deploy the workloads by using webhooks that has been proconfigured in the environments**
 
 # Final Remarks
 **We see the importance of temporal server in ensuring resiliency and high availability of the instances</br>**
